@@ -14,7 +14,7 @@ const albumSchema = gql`
 `;
 
 /*
-interface Album {
+  interface Album {
     _id: string;
     name: string;
     released: number;
@@ -23,7 +23,7 @@ interface Album {
     trackIds: string[];
     genresIds: string[];
     image: string;
-}
+  }
 */
 
 export default albumSchema;
