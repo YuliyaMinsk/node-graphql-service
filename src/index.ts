@@ -1,23 +1,23 @@
+import 'dotenv/config';
 import { ApolloServer } from 'apollo-server';
-import albumSchema from './albums/albumSchema';
-import albumResolvers from './albums/albumResolvers';
-import albumsDatasource from './albums/albumDatasource';
-import albumsType from './albums/albumType';
+import { DocumentNode } from 'graphql';
+
+import dataSources from './dataSources';
+import resolvers from './resolvers';
+import typeDef from './schema';
+
+const port = process.env.PORT || 4000;
 
 const server = new ApolloServer({
-  albumsType,
-  albumResolvers,
-  dataSources: () => {
-    return {
-      trackAPI: new TrackAPI()
-    };
-  }
+  typeDefs: [typeDef],
+  resolvers: resolvers,
+  dataSources
 });
 
-server.listen().then(() => {
+server.listen({ port: port }).then(() => {
   console.log(`
     🚀  Server is running!
-    🔉  Listening on port 4000
+    🔉  Listening on port ${port}
     📭  Query at https://studio.apollographql.com/dev
   `);
 });

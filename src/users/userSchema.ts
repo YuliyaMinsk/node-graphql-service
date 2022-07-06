@@ -8,6 +8,15 @@ const userSchema = gql`
     password: String
     email: String!
   }
+
+  type Query {
+    "Fetch a specific user, provided a user's ID"
+    user(id: ID!): User!
+  }
+
+  type JWT {
+    jwt: String
+  }
 `;
 
 /*
