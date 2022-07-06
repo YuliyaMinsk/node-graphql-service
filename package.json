@@ -1,0 +1,32 @@
+{
+  "name": "node-graphql-service",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "start": "npx nodemon ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuliyaMinsk/node-graphql-service.git"
+  },
+  "keywords": [],
+  "author": "YuliyaMinsk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuliyaMinsk/node-graphql-service/issues"
+  },
+  "homepage": "https://github.com/YuliyaMinsk/node-graphql-service#readme",
+  "devDependencies": {
+    "prettier": "2.7.1",
+    "ts-loader": "^9.3.0",
+    "ts-node": "^10.8.1",
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "apollo-server": "^3.9.0",
+    "graphql": "^16.5.0",
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.16"
+  }
+}
