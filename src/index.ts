@@ -1,6 +1,5 @@
 import 'dotenv/config';
 import { ApolloServer } from 'apollo-server';
-import { DocumentNode } from 'graphql';
 
 import dataSources from './dataSources';
 import resolvers from './resolvers';
@@ -11,7 +10,11 @@ const port = process.env.PORT || 4000;
 const server = new ApolloServer({
   typeDefs: [typeDef],
   resolvers: resolvers,
-  dataSources
+  dataSources,
+  context: ({ req }) => {
+    const token = req.headers.authorization || '';
+    return { token };
+  }
 });
 
 server.listen({ port: port }).then(() => {
