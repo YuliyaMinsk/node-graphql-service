@@ -14,11 +14,10 @@ const userSchema = gql`
   }
 
   type Query {
-    users: [User]
     "Fetch a specific user, provided a user's ID"
     user(id: ID!): User!
     "Checks if the user has been registered, returns a token if successful"
-    loginUser(password: String!, email: String!): JWT
+    loginUser(email: String!, password: String!): JWT
   }
 
   type Mutation {

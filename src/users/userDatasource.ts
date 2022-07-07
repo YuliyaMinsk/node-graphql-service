@@ -1,4 +1,4 @@
-import { RESTDataSource } from 'apollo-datasource-rest';
+import { RESTDataSource, RequestOptions } from 'apollo-datasource-rest';
 
 class UserAPI extends RESTDataSource {
   constructor() {
@@ -6,8 +6,8 @@ class UserAPI extends RESTDataSource {
     this.baseURL = 'http://localhost:3004/v1/users';
   }
 
-  getUsers() {
-    return this.get('');
+  willSendRequest(request: RequestOptions) {
+    request.headers.set('Authorization', `Bearer ${this.context.token}`);
   }
 
   getUser(userId: string) {
