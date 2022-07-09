@@ -1,9 +1,9 @@
 import 'dotenv/config';
 import { ApolloServer } from 'apollo-server';
 
-import dataSources from './dataSources';
-import resolvers from './resolvers';
-import typeDef from './schema';
+import dataSources from './modules/dataSources';
+import resolvers from './modules/resolvers';
+import typeDef from './modules/schema';
 
 const port = process.env.PORT || 4000;
 
@@ -12,7 +12,7 @@ const server = new ApolloServer({
   resolvers: resolvers,
   dataSources,
   context: ({ req }) => {
-    const token = req.headers.authorization || '';
+    let token = req.headers.authorization || '';
     return { token };
   }
 });
