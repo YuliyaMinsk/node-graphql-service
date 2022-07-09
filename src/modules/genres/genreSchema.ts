@@ -9,6 +9,21 @@ const genreSchema = gql`
     year: Int
   }
 
+  type Query {
+    "Fetch a specific genre, provided a genre's ID"
+    genre(id: ID!): Genre!
+
+    "Fetch all genres"
+    genres: [Genre]
+  }
+
+  type Mutation {
+    createGenre(name: String, description: String, country: String, year: Int): Genre
+
+    updateGenre(id: String!, name: String, description: String, country: String, year: Int): Genre
+
+    deleteGenre(id: String!): Genre
+  }
 `;
 
 /*
