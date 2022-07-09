@@ -34,7 +34,7 @@ const artistSchema = gql`
     ): Artist
 
     updateArtist(
-      id: String
+      id: String!
       firstName: String
       secondName: String
       middleName: String

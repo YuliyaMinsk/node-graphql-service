@@ -26,8 +26,8 @@ class ArtistAPI extends RESTDataSource {
     return this.post('', data);
   }
 
-  updateArtist(artistId: string) {
-    return this.put(`/${artistId}`);
+  updateArtist(artistId: string, data: IArtist) {
+    return this.put(`/${artistId}`, data);
   }
 
   deleteArtist(artistId: string) {
