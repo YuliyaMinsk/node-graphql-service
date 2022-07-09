@@ -1,9 +1,11 @@
 import { RESTDataSource, RequestOptions } from 'apollo-datasource-rest';
 
+const url = process.env.URL_USER;
+
 class UserAPI extends RESTDataSource {
   constructor() {
     super();
-    this.baseURL = 'http://localhost:3004/v1/users';
+    this.baseURL = url;
   }
 
   willSendRequest(request: RequestOptions) {

@@ -1,10 +1,12 @@
 import { RequestOptions, RESTDataSource } from 'apollo-datasource-rest';
 import { IArtist } from '../../interfaces';
 
+const url = process.env.URL_ARTIST;
+
 class ArtistAPI extends RESTDataSource {
   constructor() {
     super();
-    this.baseURL = 'http://localhost:3002/v1/artists';
+    this.baseURL = url;
   }
 
   willSendRequest(request: RequestOptions) {

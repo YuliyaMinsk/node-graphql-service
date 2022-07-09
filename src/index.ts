@@ -3,7 +3,7 @@ import { ApolloServer } from 'apollo-server';
 
 import dataSources from './modules/dataSources';
 import resolvers from './modules/resolvers';
-import typeDef from './modules/schema';
+import typeDef from './modules/schemas';
 
 const port = process.env.PORT || 4000;
 
