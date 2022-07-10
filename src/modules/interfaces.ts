@@ -56,3 +56,14 @@ export interface IAlbum {
   genresIds: string[];
   image: string;
 }
+
+export interface ITrack {
+  id: string;
+  title: string;
+  albumId: string;
+  artistsIds: string[];
+  bandsIds: string[];
+  duration: number;
+  released: number;
+  genresIds: string[];
+}

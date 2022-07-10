@@ -2,6 +2,7 @@ import AlbumAPI from './albums/albumDatasource';
 import ArtistAPI from './artists/artistDatasource';
 import BandAPI from './bands/bandDatasource';
 import GenreAPI from './genres/genreDatasource';
+import TrackAPI from './tracks/trackDatasource';
 import UserAPI from './users/userDatasource';
 
 const dataSources = () => {
@@ -10,7 +11,8 @@ const dataSources = () => {
     artistAPI: new ArtistAPI(),
     genreAPI: new GenreAPI(),
     bandAPI: new BandAPI(),
-    albumAPI: new AlbumAPI()
+    albumAPI: new AlbumAPI(),
+    trackAPI: new TrackAPI(),
   };
 };
 
