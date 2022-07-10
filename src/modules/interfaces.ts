@@ -67,3 +67,12 @@ export interface ITrack {
   released: number;
   genresIds: string[];
 }
+
+export interface IFavorite {
+  id: string;
+  userId: string;
+  bandsIds: string[];
+  genresIds: string[];
+  artistsIds: string[];
+  tracksIds: string[];
+}
