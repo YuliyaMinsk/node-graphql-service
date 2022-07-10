@@ -1,6 +1,12 @@
 import { IArtist } from '../interfaces';
 
 const artistResolvers = {
+  Artist: {
+    bands: (artist: IArtist, _: null, { dataSources }: any) => {
+      return artist.bandsIds.map((bandId) => dataSources.bandAPI.getBand(bandId));
+    }
+  },
+
   Query: {
     // get a single artist by ID
     artist: (_: null, { id }: IArtist, { dataSources }: any) => {

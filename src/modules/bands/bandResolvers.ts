@@ -1,6 +1,12 @@
 import { IBand } from '../interfaces';
 
 const bandResolvers = {
+  Band: {
+    genres: (band: IBand, _: null, { dataSources }: any) => {
+      return band.genresIds.map((genreId) => dataSources.genreAPI.getGenre(genreId));
+    }
+  },
+
   Query: {
     // get a single band by ID
     band: (_: null, { id }: IBand, { dataSources }: any) => {
