@@ -1,4 +1,4 @@
-import { IArtist } from '../../interfaces';
+import { IArtist } from '../interfaces';
 
 const artistResolvers = {
   Query: {

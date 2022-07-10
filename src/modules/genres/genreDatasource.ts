@@ -1,5 +1,5 @@
 import { RequestOptions, RESTDataSource } from 'apollo-datasource-rest';
-import { IGenre } from '../../interfaces';
+import { IGenre } from '../interfaces';
 
 const url = process.env.URL_GENRE;
 

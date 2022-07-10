@@ -2,7 +2,7 @@ import { gql } from 'apollo-server';
 
 const genreSchema = gql`
   type Genre {
-    id: ID!
+    _id: ID!
     name: String
     description: String
     country: String

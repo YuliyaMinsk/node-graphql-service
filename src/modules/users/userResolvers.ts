@@ -1,4 +1,4 @@
-import { IUser, ILogin } from '../../interfaces';
+import { IUser, ILogin } from '../interfaces';
 
 const userResolvers = {
   Query: {

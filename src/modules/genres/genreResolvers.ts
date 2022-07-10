@@ -1,4 +1,4 @@
-import { IGenre } from '../../interfaces';
+import { IGenre } from '../interfaces';
 
 const genreResolvers = {
   Query: {

@@ -1,5 +1,5 @@
 import { RequestOptions, RESTDataSource } from 'apollo-datasource-rest';
-import { IArtist } from '../../interfaces';
+import { IArtist } from '../interfaces';
 
 const url = process.env.URL_ARTIST;
 
