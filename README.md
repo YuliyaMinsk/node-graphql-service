@@ -38,6 +38,8 @@ Microservices repository [here](https://github.com/YuliyaMinsk/node-graphql-micr
 
 - Set JWT token to Headers:
 
+![image](https://user-images.githubusercontent.com/79609660/178154867-0196ea35-211a-465e-a96d-f4b922383560.png)
+
 - Now you can use all other Mutations and Queries
 
 # If you have any questions send me message by telegram :)
