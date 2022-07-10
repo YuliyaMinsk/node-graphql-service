@@ -9,7 +9,7 @@
     "target": "ES6",
     "moduleResolution": "Node"
   },
-  "include": ["src/**/*", "server.ts"],
+  "include": ["src/**/*", "index.ts"],
   "exclude": ["node_modules", "**/*.spec.ts"],
   "ts-node": {
     // Tell ts-node CLI to install the --loader automatically, explained below

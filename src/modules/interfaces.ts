@@ -45,3 +45,14 @@ export interface IMember {
   instrument: string;
   years: string;
 }
+
+export interface IAlbum {
+  id: string;
+  name: string;
+  released: number;
+  artistsIds: string[];
+  bandsIds: string[];
+  tracksIds: string[];
+  genresIds: string[];
+  image: string;
+}
